@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "478764536087",
+    "project_id": "cyber2-741fc",
+    "storage_bucket": "cyber2-741fc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478764536087:android:6abbd32be1d63e867c2752",
+        "android_client_info": {
+          "package_name": "com.example.cyber2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4CLgFnq_m_GcdUrI4QNLdChQTuOXvYJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
