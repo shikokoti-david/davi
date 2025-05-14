@@ -12,6 +12,9 @@ import com.example.cyber2.ui.theme.screens.register.RegisterScreen
 import com.example.cyber2.ui.theme.screens.students.AddstudentScreen
 import com.example.cyber2.ui.theme.screens.students.UpdatestudentScreen
 import com.example.cyber2.ui.theme.screens.students.ViewStudents
+import com.example.cyber2.ui.theme.screens.teachers.Addteachersscreen
+import com.example.cyber2.ui.theme.screens.teachers.UpdateteachersScreen
+import com.example.cyber2.ui.theme.screens.teachers.ViewTeachers
 
 @Composable
 fun AppNavHost(navController: NavHostController = rememberNavController(),startDestination:String = ROUTE_SPLASH){
@@ -25,6 +28,13 @@ fun AppNavHost(navController: NavHostController = rememberNavController(),startD
         composable(ROUTE_VIEW_STUDENTS){ ViewStudents(navController) }
         composable("$ROUTE_UPDATE_STUDENT/{studentId}") {passedData -> UpdatestudentScreen(
             navController, passedData.arguments?.getString("studentId")!! )}
+        composable (ROUTE_ADD_TEACHERS){ Addteachersscreen(navController) }
+        composable ( ROUTE_VIEW_TEACHERS ){ ViewTeachers(navController) }
+        composable (ROUTE_UPDATE_TEACHERS){  }
+        composable("$ROUTE_UPDATE_TEACHERS/{teachersId}") { passedData ->
+            UpdateteachersScreen(
+                navController, passedData.arguments?.getString("teachersId")!! )
+        }
     }
 
 
