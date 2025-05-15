@@ -47,6 +47,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.cyber2.R
 import com.example.cyber2.navigation.ROUTE_ADD_STUDENTS
+import com.example.cyber2.navigation.ROUTE_ADD_TEACHERS
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -111,7 +112,7 @@ fun DashBoardScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         TopAppBar(
-            title = { Text(text = "Strathmore") },
+            title = { Text(text = "PRO SCHOOLS") },
             navigationIcon = {
                 IconButton(onClick = {}) {
                     Icon(
@@ -174,7 +175,7 @@ fun DashBoardScreen(navController: NavController) {
         }
         Row {
             Card(
-                modifier = Modifier.padding(10.dp),
+                modifier = Modifier.padding(10.dp).clickable{navController.navigate((ROUTE_ADD_TEACHERS))},
                 shape = RoundedCornerShape(20.dp),
                 elevation = CardDefaults.cardElevation(10.dp),
                 colors = CardDefaults.cardColors(Color.Blue)

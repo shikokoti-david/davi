@@ -76,7 +76,7 @@ class AuthViewModel: ViewModel() {
                 }
                 else{
                     _errorMessage.value = task.exception?.message
-                    Toast.makeText(context,"Login Failed",Toast.LENGTH_LONG).show()
+                    Toast.makeText(context,"Login sucsess",Toast.LENGTH_LONG).show()
 
                 }
             }

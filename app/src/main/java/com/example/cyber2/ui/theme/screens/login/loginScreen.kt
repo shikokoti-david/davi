@@ -40,6 +40,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.cyber2.R
 import com.example.cyber2.data.AuthViewModel
+import com.example.cyber2.navigation.ROUTE_DASHBOARD
 import com.example.cyber2.navigation.ROUTE_REGISTER
 
 @Composable
@@ -100,12 +101,13 @@ fun LogInScreen(navController: NavController) {
             androidx.compose.ui.graphics.Color.Green))
         { Text(text = "Log In") }
 
+
         Spacer(modifier = Modifier.height(10.dp) )
 
-        Text(text = buildAnnotatedString { append("If not registered,click here")},
+        Text(text = buildAnnotatedString { append("If logged in,click here")},
             modifier = Modifier.wrapContentWidth().
             align(Alignment.CenterHorizontally).clickable {
-                navController.navigate(ROUTE_REGISTER)
+                navController.navigate(ROUTE_DASHBOARD)
 
         })
 

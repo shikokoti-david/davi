@@ -13,6 +13,7 @@ import com.example.cyber2.models.StudentModel
 import com.example.cyber2.models.TeachersModel
 import com.example.cyber2.navigation.ROUTE_VIEW_STUDENTS
 import com.example.cyber2.network.ImgurSevice
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -31,6 +32,7 @@ import java.io.File
 
 
 class TeachersViewModel : ViewModel() {
+    val teachersId = FirebaseAuth.getInstance().currentUser?.uid
     private val database = FirebaseDatabase.getInstance().reference.child("Teachers")
     private fun getImgurService(): ImgurSevice{
         val logging = HttpLoggingInterceptor()
